@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel=icon href="images/register.png" sizes="16x16" type="images/png">
+    <title>Validation With JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Parth Chandgadhiya">
+  </head>
+  <body>
+      <div class="formContainer">
+            <h1 id="webpagetitle">Member registration</h1>
+            <form name="userform"  method="POST">
+                <!--personal info section-->
+                <label for="fnameinput">
+                    First Name:
+                </label>    
+                <input type="text" id="fnameinput" name="fname" required="required" placeholder="Enter your first Name..." onkeyup="lettersOnly(fnameinput)"/> <br />
+                <label for="lnameinput">
+                    Last Name:
+                </label>    
+                <input type="text" id="lnameinput" name="lname" required="required" placeholder="Enter your Last Name..."  onkeyup="lettersOnly(lnameinput)"/> <br />
+                <label for="ageinput">
+                    Age:
+                </label>    
+                <input type="number" id="ageinput" min="18" max = "100" name="age" required="required" placeholder="What's your Age ?" onkeyup="numbersOnly(ageinput)" /> <br />
+                <!--Address ection-->
+                <label for="addressinput">
+                    Address:
+                </label>    
+                <input type="text" id="addressinput" name="address" required="required" placeholder="Street Name..." /> <br />
+                <label for="cityinput">
+                    City :
+                </label>    
+                <input type="text" id="cityinput" name="city" required="required" placeholder="City" onkeyup="lettersOnly(cityinput)"/> <br />
+                <!--Postal code section-->
+                <label for="postcodeinput">
+                    Postal-Code:
+                </label>    
+                <input type="text" id="postcodeinput" name="postcode" required="required" placeholder="A0A 0A0 format.( Please use UpperCase )" onchange="ValidatePostCode(postcodeinput)"/> <br />
+
+                <!--province section-->
+                <label for="provinceinput">
+                    Province:
+                </label> 
+                <select id="provinceinput" name="province" required="required">
+                    <option hidden selected>Select your Province</option>
+                    <option value="QC">QC (Quebec)</option>
+                    <option value="ON">ON (Ontario)</option>
+                    <option value="MN">MN (Manitoba)</option>
+                    <option value="SK">SK (Saskatchewan)</option>
+                    <option value="AB">AB (Alberta)</option>
+                    <option value="BC">BC (British Columbia)</option>
+                </select><br />
+
+                <!--password section-->
+                <label for="passwordinput">
+                    Password:
+                </label>    
+                <input class="pwsdcombine" type="password" id="passwordinput" name="password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="Secret password here..."/><br />
+                <!--password div-->
+                <div id="paswwordrequirment">
+                    <h3>Password must contain the following:</h3>
+                    <p id="length" class="invalid"><span id="len"></span>&emsp;   Minimum <b>6 characters</b></p>
+                    <p id="capital" class="invalid"><span id="cap"></span>&emsp;  A <b>capital (uppercase)</b> letter</p>
+                    <p id="letter" class="invalid"><span id="let"></span>&emsp;   A <b>lowercase</b> letter</p>
+                    <p id="number" class="invalid"><span id="num"></span>&emsp;   A <b>number</b></p>
+                </div>
+                <label for="confirminput">
+                    Confirm :
+                </label><span id='passwordmatch'></span>    
+                <input class="pwsdcombine" type="password" id="confirminput" name="confirm" required="required" placeholder="Type your password again" onkeyup='checkPassword();'  /><br />
+                <!--email section-->
+                <label for="emailinput">
+                    E-mail:
+                </label>    
+                <input type="email" id="emailinput" name="email" required="required" placeholder="Your Email address here!" onchange="ValidateEmail(emailinput)" /><br /> <br />
+                <!--button section-->
+                <input type="submit" id="submitBtn" /><br />
+
+                <input type="reset" id="resetBtn"  />
+                <p id="para">&copy;Parth Chandgadhiya<br />All right reserved.</p>
+            </form>
+      </div>
+    <script src="js/application.js"></script>
+  </body>
+</html>

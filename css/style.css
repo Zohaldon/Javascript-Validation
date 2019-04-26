@@ -1,0 +1,134 @@
+body {
+    background: #780206;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Comfortaa';
+}
+
+#webpagetitle {
+    color: #f1c40f;
+    white-space: pre-wrap;
+    text-align: center;
+}
+#para {
+    color: #ecf0f1;
+    font-weight: 200;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.formContainer
+{
+    height: 100%;
+    width:auto;
+    background-color: #141414;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #00ff00;
+    font-weight: 900;
+    font-size: 1.3em;
+    margin: 5% 10%;
+    padding: 10px 20px;
+}
+
+/*-------------------------------------------------------------input box css-------------------------------------------------------------*/
+input[type=text] ,[type=number],[type=email] {
+    background-color: #141414;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: none;
+    border-bottom: 2px solid red;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+.pwsdcombine {
+    background-color: #141414;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: none;
+    border-bottom: 2px solid red;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.7em;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+    background-color: #BDBDBD;
+}
+input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width:100%;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 6px 0px;
+    cursor: pointer;
+    font-size:0.7em;
+}
+input:focus {
+    outline: none;
+    border-bottom: 2px solid blue;
+    transition: 0.5s ease all;
+    border-bottom-width: 0.3em;
+    border-radius: 0.5em;
+}
+input::before {
+    left:50%;
+}
+input::after {
+    right:50%;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffa500;
+}
+#provinceinput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*-----------------------------------------------------------end of input box css----------------------------------------------*/
+
+/*-----------------------------------------------------------password div----------------------------------------------*/
+/* The message box is shown when the user clicks on the password field */
+#paswwordrequirment {
+    display:none;
+    background: #BDBDBD;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#paswwordrequirment p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+}
